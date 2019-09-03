@@ -11,11 +11,13 @@
     username: "{{ rhel_cloud_postconf_rhsm_username }}"
     password: "{{ rhel_cloud_postconf_rhsm_password }}"
     pool_ids: "{{ rhel_cloud_postconf_rhsm_pool_id }}"
+  register: attachsub
 
 - name: Disable all RHSM repositories
   rhsm_repository:
     name: '*'
     state: disabled
+  when: attachsub.changed
 
 - name: Enable a RHSM repository
   rhsm_repository:
