@@ -1,0 +1,6 @@
+---
+# vars file for ansible-role-rhel-cloud-postconf
+rhel_cloud_postconf_rhsm_repos:
+  - rhel-7-server-rpms
+  - rhel-7-server-extras-rpms
+  - rhel-server-rhscl-7-rpms

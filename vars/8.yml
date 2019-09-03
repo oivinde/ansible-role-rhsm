@@ -1,0 +1,5 @@
+---
+# vars file for ansible-role-rhel-cloud-postconf
+rhel_cloud_postconf_rhsm_repos:
+  - rhel-8-for-x86_64-baseos-rpms
+  - rhel-8-for-x86_64-appstream-rpms
