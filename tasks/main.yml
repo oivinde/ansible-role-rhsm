@@ -20,4 +20,4 @@
 - name: Enable a RHSM repository
   rhsm_repository:
     name: "{{ item }}"
-    with_items: "{{ rhel_cloud_postconf_rhsm_repos }}"
+  with_items: "{{ rhel_cloud_postconf_rhsm_repos }}"
