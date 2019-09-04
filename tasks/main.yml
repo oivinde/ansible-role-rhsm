@@ -1,5 +1,5 @@
 ---
-# tasks file for ansible-role-rhel-cloud-postconf
+# tasks file for ansible-role-rhsm
 
 # Variable setup.
 - name: Include OS-Major version variables.
@@ -8,9 +8,9 @@
 - name: Attach subscription
   redhat_subscription:
     state: present
-    username: "{{ rhel_cloud_postconf_rhsm_username }}"
-    password: "{{ rhel_cloud_postconf_rhsm_password }}"
-    pool_ids: "{{ rhel_cloud_postconf_rhsm_pool_id }}"
+    username: "{{ rhsm_username }}"
+    password: "{{ rhsm_password }}"
+    pool_ids: "{{ rhsm_pool_id }}"
   register: attachsub
 
 - name: Disable all RHSM repositories
@@ -22,4 +22,4 @@
 - name: Enable a RHSM repository
   rhsm_repository:
     name: "{{ item }}"
-  with_items: "{{ rhel_cloud_postconf_rhsm_repos }}"
+  with_items: "{{ rhsm_repos }}"

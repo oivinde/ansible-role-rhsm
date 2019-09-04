@@ -1,6 +1,6 @@
 ---
-# defaults file for ansible-role-rhel-cloud-postconf
-rhel_cloud_postconf_rhsm_username:
-rhel_cloud_postconf_rhsm_password:
-rhel_cloud_postconf_rhsm_pool_id:
-rhel_cloud_postconf_rhsm_repos:
+# defaults file for ansible-role-rhsm
+rhsm_username:
+rhsm_password:
+rhsm_pool_id:
+rhsm_repos:
