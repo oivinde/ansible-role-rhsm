@@ -17,7 +17,7 @@
   rhsm_repository:
     name: '*'
     state: disabled
-  when: attachsub.changed and rhsm_disable_repos|default(false)|bool == true
+  when: attachsub.changed and rhsm_disable_repos|bool == true
 
 - name: Enable a RHSM repository
   rhsm_repository:
