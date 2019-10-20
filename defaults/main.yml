@@ -4,3 +4,4 @@ rhsm_username:
 rhsm_password:
 rhsm_pool_id:
 rhsm_repos:
+rhsm_disable_repos: true
